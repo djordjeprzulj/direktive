@@ -1,0 +1,38 @@
+<!--
+<ul *ngFor='let player of players'>
+  <li *ngIf='player.rank < 100'>
+    Ime: {{ player.name}}, Ranking: {{player.rank}}
+  </li>  
+</ul>
+-->
+<!-- ngClass -->
+<!--  -->      
+<mat-list *ngFor='let player of players' >
+    <mat-list-item  [ngClass]="{'serbian-player': player.country == 'Srbija',
+                                'swiss-player': player.country == 'Švajcarska',
+                                'spanish-player': player.country == 'Španija'}">
+                                Ime: {{player.name}}, Ranking: {{player.rank}}
+    </mat-list-item>  
+</mat-list>    
+
+<!-- ngStyle -->
+<!-- 
+<mat-list *ngFor='let player of players' >
+  <mat-list-item  [ngStyle]="{'color': getColor(player.country)}">
+    Ime: {{player.name}}, Ranking: {{player.rank}}
+  </mat-list-item>  
+</mat-list>
+ <!-- ngSwitch -->
+ <!--     
+ <mat-list *ngFor='let player of players'  [ngSwitch]="player.country">
+    <mat-list-item *ngSwitchCase="'Srbija'" style="color:blue;">
+        Ime: {{ player.name}}, Ranking: {{player.rank}}      
+    </mat-list-item>  
+    <mat-list-item *ngSwitchCase="'Švajcarska'" style="color:red;">
+        Ime: {{ player.name}}, Ranking: {{player.rank}}      
+    </mat-list-item>  
+    <mat-list-item *ngSwitchDefault style="color:green;">
+        Ime: {{ player.name}}, Ranking: {{player.rank}}      
+    </mat-list-item>  
+</mat-list>
+-->
