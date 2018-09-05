@@ -2,6 +2,6 @@
 <ul  *ngFor='let group of playersByCountry'>
   <li>{{ group.country}}</li>
   <ul *ngFor='let player of group.players'>
-    <li dirCardHover>{{ player.name }} ({{player.rank}})</li>
+    <li dirCardHover="red" defaultColor="blue">{{ player.name }} ({{player.rank}})</li>
   </ul>
 </ul>
